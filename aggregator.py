@@ -33,7 +33,7 @@ SOURCES = [
 ]
 
 CAP = 1000
-OUT_YAML = "clash.yaml"
+OUT_YAML = "clash-udl4ke8um5.yaml"
 OUT_STATS = "stats.txt"
 
 
