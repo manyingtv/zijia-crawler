@@ -2,7 +2,7 @@ name: 自家爬虫自动更新
 
 on:
   schedule:
-    # 每 6 小时跑一次（UTC 时间，错开整点高峰用 17 分）
+    # 每 2 小时跑一次（UTC 时间，错开整点高峰用 17 分）
     - cron: "17 */6 * * *"
   workflow_dispatch: # 允许在 Actions 页面手动点运行
 
