@@ -1,0 +1,8 @@
+自家爬虫 本次更新统计
+更新时间(UTC): 2026-11-24 08:37:21
+抓取总数: 9629
+去重后: 6667
+多源收录分布(源数:节点数): {"2": 1401, "1": 5072, "3": 77, "4": 48, "5": 55, "7": 8, "9": 2, "8": 1, "6": 3}
+最终打包: 1000
+按协议: {"ss": 178, "trojan": 290, "vmess": 291, "vless": 128, "http": 48, "anytls": 7, "hysteria2": 46, "socks5": 9, "hysteria": 1, "ssr": 2}
+各源条数: NoMoreWalls=271, Barabama=1982, ermaozi=381, free18=166, marshall=16, ripaojiedian=24, mfuu=13, V2RayAggregator=4552, AutoMerge=91, anaer=2133
