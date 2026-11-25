@@ -1,8 +1,8 @@
 自家爬虫 本次更新统计
-更新时间(UTC): 2026-11-24 20:42:07
-抓取总数: 9299
-去重后: 6881
-多源收录分布(源数:节点数): {"2": 930, "3": 52, "1": 5793, "4": 39, "5": 55, "7": 6, "9": 2, "8": 1, "6": 3}
+更新时间(UTC): 2026-11-25 00:48:32
+抓取总数: 9219
+去重后: 6795
+多源收录分布(源数:节点数): {"2": 904, "3": 72, "4": 47, "5": 53, "7": 6, "8": 2, "9": 2, "6": 3, "1": 5706}
 最终打包: 1000
-按协议: {"ss": 172, "trojan": 329, "http": 65, "vless": 73, "anytls": 4, "vmess": 282, "hysteria2": 55, "socks5": 17, "hysteria": 1, "ssr": 2}
-各源条数: NoMoreWalls=314, Barabama=1982, ermaozi=312, free18=166, marshall=16, ripaojiedian=24, mfuu=13, V2RayAggregator=4583, AutoMerge=95, anaer=1794
+按协议: {"ss": 172, "trojan": 325, "http": 60, "socks5": 16, "vmess": 273, "vless": 83, "anytls": 5, "hysteria2": 57, "hysteria": 1, "wireguard": 6, "ssr": 2}
+各源条数: NoMoreWalls=314, Barabama=1982, ermaozi=372, free18=166, marshall=16, ripaojiedian=24, mfuu=10, V2RayAggregator=4446, AutoMerge=95, anaer=1794
