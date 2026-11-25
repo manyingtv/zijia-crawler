@@ -129,4 +129,66 @@ def main():
     multi = [e for e in uniq if len(e["sources"]) >= 2]
     multi.sort(key=lambda e: (-len(e["sources"]), -e["count"]))
     # 地区过滤：只留美/新/日/港/韩/台
-    multi = [e for e in multi if keep_region(str(e["proxy"].get
+    multi = [e for e in multi if keep_region(str(e["proxy"].get("name") or ""))]
+    kept = multi[:CAP]
+    print(f"[region] asia+us kept: {len(kept)}")
+
+    out_proxies, used = [], set()
+    for e in kept:
+        p = dict(e["proxy"])
+        orig = str(p.get("name") or f"{p.get('type','node')}-{p['server']}").strip()
+        name = f"[A自家爬虫] {orig}"
+        base, n = name, 2
+        while name in used:
+            name = f"{base} #{n}"
+            n += 1
+        used.add(name)
+        p["name"] = name
+        out_proxies.append(p)
+
+    names = [p["name"] for p in out_proxies]
+    config = {
+        "mixed-port": 7890,
+        "allow-lan": False,
+        "mode": "rule",
+        "log-level": "warning",
+        "proxies": out_proxies,
+        "proxy-groups": [
+            {
+                "name": "自动选择",
+                "type": "url-test",
+                "url": "http://www.gstatic.com/generate_204",
+                "interval": 300,
+                "tolerance": 80,
+                "proxies": names,
+            },
+            {"name": "节点选择", "type": "select", "proxies": ["自动选择"] + names},
+        ],
+        "rules": ["MATCH,节点选择"],
+    }
+    with open(OUT_YAML, "w", encoding="utf-8") as f:
+        yaml.safe_dump(config, f, allow_unicode=True, sort_keys=False, width=1000)
+
+    by_type = {}
+    for p in out_proxies:
+        t = str(p.get("type", "?"))
+        by_type[t] = by_type.get(t, 0) + 1
+    lines = [
+        "自家爬虫 本次更新统计",
+        f"更新时间(UTC): {time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime())}",
+        f"抓取总数: {raw_total}",
+        f"去重后: {len(uniq)}",
+        f"多源收录分布(源数:节点数): {json.dumps(dist, ensure_ascii=False)}",
+        f"地区过滤后(仅美新日港韩台): {len(multi)}",
+        f"最终打包: {len(out_proxies)}",
+        f"按协议: {json.dumps(by_type, ensure_ascii=False)}",
+        "各源条数: " + ", ".join(f"{n}={c}" for n, c in per_source),
+    ]
+    with open(OUT_STATS, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+    print("\n".join(lines))
+    print(f"[done] wrote {OUT_YAML} and {OUT_STATS}")
+
+
+if __name__ == "__main__":
+    main()
