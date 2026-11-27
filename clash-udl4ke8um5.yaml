@@ -3,6 +3,16 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
+- client-fingerprint: chrome
+  name: '[A自家爬虫] 🇺🇸US_25|3.2MB/s'
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.114.114
+  skip-cert-verify: false
+  sni: learn.findconnectwithemployersandbuildprofessionalnetwork.com
+  type: trojan
+  udp: true
 - name: '[A自家爬虫] 🇺🇸[www.v2nodes.com] trojan-US-... #4'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -15,6 +25,12 @@ proxies:
   server: 66.163.122.25
   sni: cdn.searchnationwidecareerchangehelperandguidancetoday.com
   type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: '[A自家爬虫] 🇭🇰[www.v2nodes.com] ss-HK-1624...'
+  password: abc62f00-95a8-4c2e-a85d-36a2cdc977da
+  port: 28014
+  server: waic.pro.main.sys-metric-report.com
+  type: ss
 - cipher: aes-128-gcm
   name: '[A自家爬虫] 🇯🇵[www.v2nodes.com] ss-JP-5141...'
   password: shadowsocks
@@ -32,6 +48,12 @@ proxies:
   password: shadowsocks
   port: 443
   server: 149.22.87.241
+  type: ss
+- cipher: aes-256-gcm
+  name: '[A自家爬虫] 🇰🇷[www.v2nodes.com] ss-KR-1624...'
+  password: qpowi_vip_tunnel_2026_secure
+  port: 8388
+  server: 211.233.33.228
   type: ss
 - cipher: aes-256-gcm
   name: '[A自家爬虫] 🇸🇬[www.v2nodes.com] ss-SG-1616...'
@@ -64,7 +86,32 @@ proxies:
   server: 15.204.233.41
   type: ss
 - client-fingerprint: chrome
-  name: '[A自家爬虫] 🇭🇰 香港 | HKG'
+  name: '[A自家爬虫] 🇺🇸US_13|2.7MB/s'
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.114.166
+  skip-cert-verify: true
+  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: '[A自家爬虫] 🇭🇰 香港 | HKG #1'
+  network: ws
+  port: 44867
+  server: 47.244.120.197
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  ws-opts:
+    headers:
+      Host: 47.244.120.197
+    path: /arki
+- client-fingerprint: chrome
+  name: '[A自家爬虫] 🇭🇰HK_1|1.0MB/s'
   password: 2902c46c8493
   port: 443
   server: ibsdsf.df6h451rh.xin
@@ -72,22 +119,6 @@ proxies:
   sni: docs.microsoft.com
   type: anytls
   udp: true
-- alterId: 0
-  cipher: auto
-  name: '[A自家爬虫] 🇭🇰 香港 | HKG #2'
-  network: ws
-  port: 443
-  server: 47.86.90.31
-  servername: bywxdhirqkjj8xaz.v.3dns.vip
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 234a8041-2b4d-44a3-a8d8-523cbfd58dc4
-  ws-opts:
-    headers:
-      Host: bywxdhirqkjj8xaz.v.3dns.vip
-    path: /ws-vmess
 - cipher: aes-256-gcm
   name: '[A自家爬虫] 🇭🇰[www.v2nodes.com] ss-HK-1621...'
   password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
@@ -120,6 +151,12 @@ proxies:
   skip-cert-verify: true
   sni: r.tw3.cat.bilibili.com
   type: trojan
+- name: '[A自家爬虫] 🇺🇸[www.v2nodes.com] trojan-US-... #6'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.13
+  sni: blog.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
 - client-fingerprint: chrome
   name: '[A自家爬虫] 🇹🇼 台湾2|@ripaojiedian'
   password: 0324fbc29561
@@ -129,16 +166,7 @@ proxies:
   sni: docs.microsoft.com
   type: anytls
   udp: true
-- client-fingerprint: chrome
-  name: '[A自家爬虫] 🇭🇰 香港3|@ripaojiedian'
-  password: 0324fbc29561
-  port: 443
-  server: 5641sdds.df6h451rh.xin
-  skip-cert-verify: true
-  sni: images.ctfassets.net
-  type: anytls
-  udp: true
-- name: '[A自家爬虫] 🇰🇷KR_1|5.0MB/s'
+- name: '[A自家爬虫] 🇰🇷KR_1|4.7MB/s'
   port: 1080
   server: 59.11.209.162
   skip-cert-verify: true
@@ -150,65 +178,36 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: '[A自家爬虫] 🇺🇸US_4|1.7MB/s'
-  password: 'null'
-  port: 9002
-  server: 138.199.35.220
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: 'null'
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  name: '[A自家爬虫] 🇺🇸 美国 | USA #6'
-  network: ws
+- type: vless
+  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (17)'
+  server: 196.196.148.76
   port: 443
-  server: US032020.ssgreen.org
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 25e53ac3-1737-48c0-b92c-10d012af52f5
-  ws-opts:
-    headers:
-      Host: US032020.ssgreen.org
-    path: /wes
-- type: trojan
-  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (46)'
-  server: sclass-01.catcat321.com
-  port: 20103
-  password: d7563108-615c-4338-a7bd-77f359869a4a
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
   udp: true
   tls: true
-  servername: hk.catxstar.com
-  sni: hk.catxstar.com
+  servername: 8a2e72t.nl20.h1clayd.shop
+  sni: 8a2e72t.nl20.h1clayd.shop
   skip-cert-verify: false
-- name: '[A自家爬虫] 🇺🇸US_103|623KB/s|A004-260618 [0ccf6aebe480]'
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
+    short-id: 8d0d0679f42ffd98
+- type: vless
+  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (11)'
+  server: 196.199.122.2
   port: 443
-  server: 15.204.247.244
-  sub_tag: A004-260618
-  type: ss
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
   udp: true
-- name: '[A自家爬虫] 🇺🇸US_71|1.5MB/s|A004-260618 [60a9d50d005d]'
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  port: 7307
-  server: 15.204.246.132
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: '[A自家爬虫] 🇺🇸US_92|1.4MB/s|B007-260618 [678238b25040]'
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  port: 8881
-  server: 15.204.246.108
-  sub_tag: B007-260618
-  type: ss
-  udp: true
+  tls: true
+  servername: 7aa271t.es1.h1clayd.click
+  sni: 7aa271t.es1.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+    short-id: 42426c882c5fcd41
 - name: '[A自家爬虫] 🇰🇷KR_21|654KB/s|M002-260618 [62beea3b6fba]'
   alterId: 0
   cipher: auto
@@ -241,39 +240,15 @@ proxies:
     headers:
       Host: freeceshi6.frii.site
     path: /proxyip=ProxyIP.JP.CMLiussss.net
-- name: '[A自家爬虫] 🇺🇸 美国 | USA 4'
-  network: ws
-  password: c48qMRRfLJ3kwD4P_XpgfIq6
-  port: 443
-  server: 3x-sub.linzhonghong.com
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /tjbbb7eab89c9a
-- type: vless
-  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (11)'
-  server: 196.199.122.2
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: 7aa271t.es1.h1clayd.click
-  sni: 7aa271t.es1.h1clayd.click
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
-    short-id: 42426c882c5fcd41
 - client-fingerprint: firefox
-  name: '[A自家爬虫] 🇯🇵[www.v2nodes.com] vless-JP-1...'
+  name: '[A自家爬虫] 🇯🇵 日本 | JPN #1'
   network: ws
   port: 8463
   server: 213.183.41.31
   servername: share.plumstatic.com
   tls: true
   type: vless
+  udp: true
   uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
   ws-opts:
     path: /ws
@@ -286,27 +261,6 @@ proxies:
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   ws-opts:
     path: /
-- name: '[A自家爬虫] 🇭🇰 香港 | HKG #1'
-  password: '12012'
-  port: 12012
-  server: 47.242.93.89
-  skip-cert-verify: true
-  sni: ali-hk.b-gfw.cfd
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: '[A自家爬虫] 🇰🇷[www.v2nodes.com] vless-KR-1...'
-  network: ws
-  port: 443
-  server: krd.80782636.xyz
-  servername: krd.80782636.xyz
-  tls: true
-  type: vless
-  uuid: db906786-8c49-4b17-9182-cea680ef954d
-  ws-opts:
-    headers:
-      Host: krd.80782636.xyz
-    path: /kw7x2mq9
 - client-fingerprint: chrome
   name: '[A自家爬虫] 🇺🇸[www.v2nodes.com] vless-US-1... #1'
   network: ws
@@ -320,135 +274,82 @@ proxies:
     headers:
       Host: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
     path: /ffad70ffdfc3bcda
-- cipher: aes-256-gcm
-  name: '[A自家爬虫] 🇰🇷[www.v2nodes.com] ss-KR-1624...'
-  password: qpowi_vip_tunnel_2026_secure
-  port: 8388
-  server: 211.233.33.228
-  type: ss
+- type: vless
+  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (9)'
+  server: 162.35.101.177
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  udp: true
+  tls: true
+  servername: 0592efg.us8.h1clayd.click
+  sni: 0592efg.us8.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: edge
+  reality-opts:
+    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
+    short-id: bd8f712209a9c283
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 99f2107b03f8
+- name: '[A自家爬虫] 🇹🇼 台湾3|@ripaojiedian'
+  password: 2902c46c8493
+  port: 443
+  server: er8u54dh.df6h451rh.xin
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  type: anytls
+  udp: true
 - client-fingerprint: chrome
-  name: '[A自家爬虫] 🇺🇸 美国 | USA #7'
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  name: '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN'
+  password: 2902c46c8493
   port: 443
-  server: 66.163.114.106
+  server: rtifgjdr.df6h451rh.xin
   skip-cert-verify: true
-  sni: www.findconnectwithemployersandbuildprofessionalnetwork.com
-  type: trojan
+  sni: docs.microsoft.com
+  type: anytls
   udp: true
-- client-fingerprint: chrome
-  name: '[A自家爬虫] 🇺🇸 美国 | USA #10'
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.114.166
-  skip-cert-verify: true
-  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
-  type: trojan
-  udp: true
-- cipher: aes-128-gcm
-  name: '[A自家爬虫] 🇭🇰 香港 | HKG #3'
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  port: 40000
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: '[A自家爬虫] 🇭🇰 香港 | HKG #4'
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  port: 40012
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: '[A自家爬虫] 🇭🇰 香港 | HKG #5'
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  port: 22061
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: '[A自家爬虫] 🇯🇵 日本 | JPN #1'
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  port: 22069
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  type: ss
-  udp: true
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  name: '[A自家爬虫] 🇸🇬 新加坡 | SGP #1'
-  network: ws
-  port: 54327
-  server: 8.222.172.146
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 8a3d03bc-9b35-43b4-d901-c8531f2bbc6d
-  ws-opts:
-    path: /pages
-- cipher: aes-128-gcm
-  name: '[A自家爬虫] 🇸🇬 新加坡 | SGP #4'
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  port: 40022
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: '[A自家爬虫] 🇺🇸 美国 | USA #1'
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  port: 40031
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: '[A自家爬虫] 🇺🇸 美国 | USA #2'
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  port: 40032
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: '[A自家爬虫] 🇺🇸 美国 | USA #3'
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  port: 40030
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  type: ss
-  udp: true
-- name: '[A自家爬虫] 🇺🇸 美国 | USA #5'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.114.114
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: '[A自家爬虫] 🇺🇸 美国 | USA #8'
-  password: qpbw_r_Ykr5EZTGKX3mNZSVTj9liEAL3
-  port: 443
-  server: 186.241.106.5
-  skip-cert-verify: true
-  sni: 186.241.106.5
-  type: trojan
-  udp: true
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  name: '[A自家爬虫] 🇺🇸 美国 | USA #9'
-  network: ws
-  port: 443
-  server: US032023.ssgreen.org
+- name: '[A自家爬虫] 🇺🇸US_16|2.0MB/s'
+  port: 9002
+  server: 138.199.35.200
   skip-cert-verify: true
   tls: true
-  type: vmess
+  type: http
   udp: true
-  uuid: b7b40f6a-c795-48fc-bafe-b632f6ce5888
-  ws-opts:
-    headers:
-      Host: US032023.ssgreen.org
-    path: /wes
+  x-toolall-mihomo: true
+- name: '[A自家爬虫] 🇺🇸US_17|2.8MB/s'
+  password: l1tlrdx52v
+  port: 62000
+  server: 66.253.2.69
+  type: socks5
+  username: u_rb1dba2
+- name: '[A自家爬虫] 🇺🇸US_18|1.9MB/s'
+  port: 9443
+  server: 198.44.138.27
+  skip-cert-verify: true
+  tls: true
+  type: http
+- cipher: chacha20-ietf-poly1305
+  name: '[A自家爬虫] 🇭🇰 香港 | HKG 2'
+  password: f8256fdf607a8015a02b46df1563c2f35ebaff0d56f2923a
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: hongkong.astroapps.io
+    mode: websocket
+    mux: false
+    path: /ba91191d41f96668df6fe14b
+    tls: true
+  port: 443
+  server: hongkong.astroapps.io
+  type: ss
+  udp: true
+- name: '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN #1'
+  password: 40a8a71b-91d3-4b63-9907-5e12ad2259c1
+  port: 20200
+  server: sclass-c2.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+  udp: true
 - type: trojan
   name: '[A自家爬虫] 🇺🇸US美國丨yoyapai.com'
   server: 104.16.174.22
@@ -477,31 +378,15 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- type: vless
-  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (9)'
-  server: 162.35.101.177
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  udp: true
-  tls: true
-  servername: 0592efg.us8.h1clayd.click
-  sni: 0592efg.us8.h1clayd.click
-  skip-cert-verify: false
-  client-fingerprint: edge
-  reality-opts:
-    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
-    short-id: bd8f712209a9c283
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 99f2107b03f8
-- name: '[A自家爬虫] 🇺🇸US_160|577KB/s|R002-260618 [c63ef908cfee]'
-  port: 443
-  server: 149.34.248.65
+- name: '[A自家爬虫] 🇺🇸US_238|729KB/s|P002-260618 [d1e830ac3b71]'
+  password: 'null'
+  port: 9002
+  server: 138.199.35.220
   skip-cert-verify: true
-  sni: 149.34.248.65
-  sub_tag: R002-260618
+  sub_tag: P002-260618
   tls: true
   type: http
+  username: 'null'
   udp: true
 - name: '[A自家爬虫] 🇺🇸US_15|843KB/s|A004-260618 [1b7912caedd7]'
   alterId: 0
@@ -518,6 +403,20 @@ proxies:
   xudp: true
   packet-encoding: xudp
   servername: 84.17.41.2
+- type: vless
+  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (8)'
+  server: 196.196.148.85
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  udp: true
+  tls: true
+  servername: 5d0319t.nl7.h1clayd.click
+  sni: 5d0319t.nl7.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
+    short-id: 361d0dd59c70516f
 - name: '[A自家爬虫] 🇺🇸US_69|1.1MB/s|S004-260618 [3035c07b1d36]'
   alterId: '0'
   cipher: auto
@@ -534,19 +433,19 @@ proxies:
   packet-encoding: xudp
   servername: community.fastly.steamstatic.com
 - type: vless
-  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (8)'
-  server: 196.196.148.85
+  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (13)'
+  server: 136.148.83.69
   port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
   udp: true
   tls: true
-  servername: 5d0319t.nl7.h1clayd.click
-  sni: 5d0319t.nl7.h1clayd.click
+  servername: szqbx-ru-77dc.my-fade.cloud
+  sni: szqbx-ru-77dc.my-fade.cloud
   skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
-    short-id: 361d0dd59c70516f
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: qq
 - name: '[A自家爬虫] 🇸🇬SG_6|1007KB/s|A004-260618 [0298ea3f8227]'
   alterId: 0
   cipher: auto
@@ -605,35 +504,6 @@ proxies:
   xudp: true
   network: tcp
   packet-encoding: xudp
-- type: vless
-  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (17)'
-  server: 196.196.148.76
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: 8a2e72t.nl20.h1clayd.shop
-  sni: 8a2e72t.nl20.h1clayd.shop
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
-    short-id: 8d0d0679f42ffd98
-- type: vless
-  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (24)'
-  server: 5d0319t.nl7.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  udp: true
-  tls: true
-  servername: 5d0319t.nl7.h1clayd.click
-  sni: 5d0319t.nl7.h1clayd.click
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
-    short-id: 361d0dd59c70516f
 - name: '[A自家爬虫] 🇺🇸US_200|1.1MB/s|A001-260618 [1fae46468fbb]'
   client-fingerprint: chrome
   password: ae7eb4dwyaz25pxwgq59
@@ -660,20 +530,6 @@ proxies:
     path: /ranking/htm
     headers:
       Host: v2n6.11676767.xyz
-- type: vless
-  name: '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (23)'
-  server: a80b5386.fi2.h1clayd.click
-  port: 443
-  uuid: 2ccb06b6-9eac-44eb-ade7-c1e5afb8e7df
-  udp: true
-  tls: true
-  servername: a80b5386.fi2.h1clayd.click
-  sni: a80b5386.fi2.h1clayd.click
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: PslSaSQWP4BZZmkL7irab4FMti8sW6BvoC7ytFjJFyc
-    short-id: cc678f10161992a9
 - name: '[A自家爬虫] 🇸🇬SG_12|836KB/s|A004-260618 [0078dd792eff]'
   alterId: 0
   cipher: auto
@@ -689,39 +545,23 @@ proxies:
   xudp: true
   packet-encoding: xudp
   servername: 149.88.23.202
-- alterId: 0
-  cipher: auto
-  name: '[A自家爬虫] 🇭🇰 香港 | HKG #2 #2'
-  network: ws
-  port: 44867
-  server: 47.244.120.197
+- auth: lvu_3390f238bef4e3058ac47c87473755cf_07cd5acf7265adf5c1210040ca46facf:np2.1.HJjJucZ0-OZZUq5Njkl48v1gYx7ol9rXjxYXZUxrQdM
+  name: '[A自家爬虫] 🇺🇸 美国 | USA 33'
+  password: lvu_3390f238bef4e3058ac47c87473755cf_07cd5acf7265adf5c1210040ca46facf:np2.1.HJjJucZ0-OZZUq5Njkl48v1gYx7ol9rXjxYXZUxrQdM
+  port: 14443
+  server: 194.87.224.137
   skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  ws-opts:
-    headers:
-      Host: 47.244.120.197
-    path: /arki
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '[A自家爬虫] 🇰🇷 韩国 | KOR #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 13.124.238.118
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
+  sni: n37.neproxy.net
   type: hysteria2
-- name: '[A自家爬虫] 🇸🇬SG-🚀@VPNine1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 47.129.155.154
+- name: '[A自家爬虫] 🇺🇸US_20|1.9MB/s'
+  password: 'null'
+  port: 9002
+  server: 138.199.35.198
   skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
+  sni: 138.199.35.198
+  tls: true
+  type: http
+  username: 'null'
 - name: '[A自家爬虫] 🇺🇸US_401|488KB/s|F003-260618 [43563ab6d2f5]'
   alpn:
   - ''
@@ -757,22 +597,32 @@ proxies:
   xudp: true
   network: tcp
   packet-encoding: xudp
-- type: vless
-  name: '[A自家爬虫] 🇰🇷_韩国 (2)'
-  server: 14.44.19.57
-  port: 12101
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-  udp: true
-  tls: true
-  servername: senflarelink-node-nwz76h.pages.dev
-  sni: senflarelink-node-nwz76h.pages.dev
-  skip-cert-verify: true
-  client-fingerprint: chrome
+- alterId: 0
+  cipher: auto
+  name: '[A自家爬虫] 🇭🇰 香港 | HKG #2'
   network: ws
+  port: 443
+  server: 47.86.90.31
+  servername: bywxdhirqkjj8xaz.v.3dns.vip
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 234a8041-2b4d-44a3-a8d8-523cbfd58dc4
   ws-opts:
-    path: /
     headers:
-      Host: senflarelink-node-nwz76h.pages.dev
+      Host: bywxdhirqkjj8xaz.v.3dns.vip
+    path: /ws-vmess
+- name: '[A自家爬虫] 🇺🇸 美国 | USA 4'
+  network: ws
+  password: c48qMRRfLJ3kwD4P_XpgfIq6
+  port: 443
+  server: 3x-sub.linzhonghong.com
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /tjbbb7eab89c9a
 - name: '[A自家爬虫] 🇺🇸 24@exclavevpn'
   obfs: salamander
   obfs-password: re61ep4ancwplwh8
@@ -791,10 +641,26 @@ proxies:
   sni: vk.com
   tls: false
   type: hysteria2
+- name: '[A自家爬虫] 🇰🇷KR-🚀@VPNine1'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 443
+  server: 13.124.238.118
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
 - name: '[A自家爬虫] 🇸🇬214601 | ⚡️Telegram = t.me/v...'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
   server: 18.143.176.12
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- name: '[A自家爬虫] 🇸🇬SG-🚀@VPNine1'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 443
+  server: 47.129.155.154
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
@@ -848,6 +714,19 @@ proxies:
     headers:
       Host: hkg.kkp.us.ci
     path: /487e07e6-2930-4e71-99b3-6792e5909f16
+- client-fingerprint: chrome
+  name: '[A自家爬虫] 🇰🇷[www.v2nodes.com] vless-KR-1...'
+  network: ws
+  port: 443
+  server: krd.80782636.xyz
+  servername: krd.80782636.xyz
+  tls: true
+  type: vless
+  uuid: db906786-8c49-4b17-9182-cea680ef954d
+  ws-opts:
+    headers:
+      Host: krd.80782636.xyz
+    path: /kw7x2mq9
 - client-fingerprint: chrome
   name: '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG-1...'
   port: 443
@@ -950,76 +829,268 @@ proxies:
     headers:
       Host: us5-cdn.xyn.lgbt
     path: /yn-lax-fb366a66e8526ebc4a311464
-- name: '[A自家爬虫] 🇺🇸[www.v2nodes.com] trojan-US-... #6'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- alpn:
+  - http/1.1
+  client-fingerprint: android
+  name: '[A自家爬虫] 🇺🇸 美国 | USA #2'
+  network: xhttp
   port: 443
-  server: 66.163.112.13
-  sni: blog.unlockyourfuturefindyourperfectcareer.com
+  server: qqqqqqqq.99944444.xyz
+  servername: qqqqqqqq.99944444.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
+  xhttp-opts:
+    host: qqqqqqqq.99944444.xyz
+    mode: auto
+    path: /NgInAz8EvgxBHueA9ne8tqLzLX
+- alpn:
+  - http/1.1
+  client-fingerprint: android
+  name: '[A自家爬虫] 🇺🇸 美国 | USA #4'
+  network: xhttp
+  port: 443
+  server: aaaaaaa.7ui.ipv64.net
+  servername: aaaaaaa.7ui.ipv64.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: da988d4c-540f-4719-896e-a878812bad69
+  xhttp-opts:
+    host: aaaaaaa.7ui.ipv64.net
+    mode: auto
+    path: /NgInAz8EvgxBHueA9ne8tqLzLX
+- alpn:
+  - http/1.1
+  client-fingerprint: android
+  name: '[A自家爬虫] 🇺🇸 美国 | USA #11'
+  network: xhttp
+  port: 443
+  server: sssssss.260920-3.kdns.fr
+  servername: sssssss.260920-3.kdns.fr
+  tls: true
+  type: vless
+  udp: true
+  uuid: ec613575-5972-41c9-a50f-9577bcd96ce3
+  xhttp-opts:
+    host: sssssss.260920-3.kdns.fr
+    mode: auto
+    path: /NgInAz8EvgxBHueA9ne8tqLzLX
+- alpn:
+  - http/1.1
+  client-fingerprint: android
+  name: '[A自家爬虫] 🇺🇸 美国 | USA #12'
+  network: xhttp
+  port: 443
+  server: ddddddd.r0-6.cc.cd
+  servername: ddddddd.r0-6.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: da988d4c-540f-4719-896e-a878812bad69
+  xhttp-opts:
+    host: ddddddd.r0-6.cc.cd
+    mode: auto
+    path: /NgInAz8EvgxBHueA9ne8tqLzLX
+- alpn:
+  - http/1.1
+  client-fingerprint: android
+  name: '[A自家爬虫] 🇺🇸 美国 | USA #13'
+  network: xhttp
+  port: 443
+  server: rrrr.r0-4.cc.cd
+  servername: rrrr.r0-4.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: da988d4c-540f-4719-896e-a878812bad69
+  xhttp-opts:
+    host: rrrr.r0-4.cc.cd
+    mode: auto
+    path: /NgInAz8EvgxBHueA9ne8tqLzLX
+- alpn:
+  - http/1.1
+  client-fingerprint: android
+  name: '[A自家爬虫] 🇺🇸 美国 | USA #15'
+  network: xhttp
+  port: 443
+  server: rr.r0-4.cc.cd
+  servername: rr.r0-4.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: da988d4c-540f-4719-896e-a878812bad69
+  xhttp-opts:
+    host: rr.r0-4.cc.cd
+    mode: auto
+    path: /NgInAz8EvgxBHueA9ne8tqLzLX
+- alpn:
+  - http/1.1
+  client-fingerprint: android
+  name: '[A自家爬虫] 🇺🇸 美国 | USA #19'
+  network: xhttp
+  port: 443
+  server: dddd.as2-0.kdns.fr
+  servername: dddd.as2-0.kdns.fr
+  tls: true
+  type: vless
+  udp: true
+  uuid: da988d4c-540f-4719-896e-a878812bad69
+  xhttp-opts:
+    host: dddd.as2-0.kdns.fr
+    mode: auto
+    path: /NgInAz8EvgxBHueA9ne8tqLzLX
+- alpn:
+  - http/1.1
+  client-fingerprint: android
+  name: '[A自家爬虫] 🇺🇸 美国 | USA #32'
+  network: xhttp
+  port: 443
+  server: rrrrr.r0-4.cc.cd
+  servername: rrrrr.r0-4.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: da988d4c-540f-4719-896e-a878812bad69
+  xhttp-opts:
+    host: rrrrr.r0-4.cc.cd
+    mode: auto
+    path: /NgInAz8EvgxBHueA9ne8tqLzLX
+- client-fingerprint: chrome
+  name: '[A自家爬虫] 🇺🇸US_12|1.1MB/s'
+  network: ws
+  password: ff5aeddc-8fea-4d17-b504-1a9fdacca802
+  port: 443
+  server: 45.130.125.160
+  skip-cert-verify: false
+  sni: go.appsflyer.com.r3xxe.eu.cc
   type: trojan
-- name: '[A自家爬虫] 🇹🇼TW_1|1.6MB/s'
-  password: 2902c46c8493
-  port: 443
-  server: er8u54dh.df6h451rh.xin
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+    path: /br-orcl
+- name: '[A自家爬虫] 🇺🇸US_15|2.8MB/s'
+  port: 9443
+  server: 38.95.111.226
   skip-cert-verify: true
-  sni: px.ads.linkedin.com
+  tls: true
+  type: http
+  udp: true
+  x-toolall-mihomo: true
+- name: '[A自家爬虫] 🇭🇰HK_2|3.7MB/s'
+  password: 5807f1c4-b50e-4ec0-8d01-274045da0da5
+  port: 43120
+  server: dddz-1-x.473221.xyz
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
   type: anytls
-- name: '[A自家爬虫] 🇹🇼TW_2|2.8MB/s'
-  password: 2902c46c8493
-  port: 443
-  server: rtifgjdr.df6h451rh.xin
+  udp: true
+- name: '[A自家爬虫] 🇺🇸US_19|2.6MB/s'
+  port: 9002
+  server: 138.199.35.207
   skip-cert-verify: true
-  sni: docs.microsoft.com
+  tls: true
+  type: http
+  udp: true
+  x-toolall-mihomo: true
+- name: '[A自家爬虫] 🇺🇸US_22|2.1MB/s'
+  password: None
+  port: 38182
+  server: 69.55.49.177
+  skip-cert-verify: true
+  type: socks5
+- name: '[A自家爬虫] 🇭🇰 香港 | HKG'
+  password: d2e242fe-3a90-4d5c-b890-6089474faa39
+  port: 443
+  server: im.lovehk.xyz
+  skip-cert-verify: true
+  sni: im.lovehk.xyz
   type: anytls
   udp: true
-- name: '[A自家爬虫] 🇺🇸US_7|3.5MB/s'
-  port: 9002
-  server: 138.199.35.196
+- name: '[A自家爬虫] 🇯🇵 日本 | JPN'
+  password: c0e8e373-946f-4862-98e6-3aaf1db7b53c
+  port: 57180
+  server: media.gosthk.site
   skip-cert-verify: true
-  tls: true
-  type: http
+  sni: media.gosthk.site
+  type: anytls
   udp: true
-  x-toolall-mihomo: true
-- name: '[A自家爬虫] 🇺🇸US_8|3.3MB/s'
-  port: 9002
-  server: 138.199.35.200
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: '[A自家爬虫] 🇺🇸US_9|2.2MB/s'
-  port: 9002
-  server: 138.199.35.201
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: '[A自家爬虫] 🇺🇸US_10|3.7MB/s'
-  password: l1tlrdx52v
-  port: 62000
-  server: 66.253.2.69
-  type: socks5
-  username: u_rb1dba2
-- name: '[A自家爬虫] 🇯🇵JP_1|3.9MB/s'
+- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
+  name: '[A自家爬虫] 🇸🇬 新加坡 | SGP #2'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: fan.571589.xyz
+  server: 47.128.219.111
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- name: '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN 2'
+  password: fdf9452a-e509-4f66-953b-8c2fd32f67d8
+  port: 443
+  server: photo.lovehk.xyz
+  skip-cert-verify: true
+  sni: photo.lovehk.xyz
+  type: anytls
+  udp: true
+- name: '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN 4'
+  password: 4029698d-89a9-4e90-9eac-9b8c7bf4b5b5
+  port: 443
+  server: theme.lovehk.xyz
+  skip-cert-verify: true
+  sni: theme.lovehk.xyz
+  type: anytls
+  udp: true
+- alpn:
+  - http/1.1
+  client-fingerprint: android
+  name: '[A自家爬虫] 🇺🇸 美国 | USA #1'
+  network: xhttp
+  port: 443
+  server: s.22299999.xyz
+  servername: s.22299999.xyz
   tls: true
-  type: http
-- name: '[A自家爬虫] 🇺🇸US_14|1.2MB/s'
-  password: ppyefe3k
-  port: 62000
-  server: 23.230.200.176
-  skip-cert-verify: true
-  type: socks5
-  username: u1f0cijj
-- name: '[A自家爬虫] 🇯🇵JP_2|1.3MB/s'
-  password: EGJDy5Kg
-  port: 42000
-  server: 103.248.150.50
-  skip-cert-verify: true
-  type: socks5
-  username: paZFN3JA
+  type: vless
+  udp: true
+  uuid: da988d4c-540f-4719-896e-a878812bad69
+  xhttp-opts:
+    host: s.22299999.xyz
+    mode: auto
+    path: /NgInAz8EvgxBHueA9ne8tqLzLX
+- alpn:
+  - http/1.1
+  client-fingerprint: android
+  name: '[A自家爬虫] 🇺🇸 美国 | USA #3'
+  network: xhttp
+  port: 443
+  server: s.260920-3.kdns.fr
+  servername: s.260920-3.kdns.fr
+  tls: true
+  type: vless
+  udp: true
+  uuid: ec613575-5972-41c9-a50f-9577bcd96ce3
+  xhttp-opts:
+    host: s.260920-3.kdns.fr
+    mode: auto
+    path: /NgInAz8EvgxBHueA9ne8tqLzLX
+- alpn:
+  - http/1.1
+  client-fingerprint: android
+  name: '[A自家爬虫] 🇺🇸 美国 | USA #5'
+  network: xhttp
+  port: 443
+  server: ss.260920-3.kdns.fr
+  servername: ss.260920-3.kdns.fr
+  tls: true
+  type: vless
+  udp: true
+  uuid: ec613575-5972-41c9-a50f-9577bcd96ce3
+  xhttp-opts:
+    host: ss.260920-3.kdns.fr
+    mode: auto
+    path: /NgInAz8EvgxBHueA9ne8tqLzLX
 proxy-groups:
 - name: 自动选择
   type: url-test
@@ -1027,87 +1098,76 @@ proxy-groups:
   interval: 300
   tolerance: 80
   proxies:
+  - '[A自家爬虫] 🇺🇸US_25|3.2MB/s'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] trojan-US-... #4'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] trojan-US-... #8'
+  - '[A自家爬虫] 🇭🇰[www.v2nodes.com] ss-HK-1624...'
   - '[A自家爬虫] 🇯🇵[www.v2nodes.com] ss-JP-5141...'
   - '[A自家爬虫] 🇯🇵[www.v2nodes.com] ss-JP-1291...'
   - '[A自家爬虫] 🇯🇵[www.v2nodes.com] ss-JP-9223...'
+  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] ss-KR-1624...'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] ss-SG-1616...'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] ss-SG-1615... #2'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] ss-SG-1615... #3'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] ss-US-1560...'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #2'
+  - '[A自家爬虫] 🇺🇸US_13|2.7MB/s'
+  - '[A自家爬虫] 🇭🇰 香港 | HKG #1'
+  - '[A自家爬虫] 🇭🇰HK_1|1.0MB/s'
   - '[A自家爬虫] 🇭🇰[www.v2nodes.com] ss-HK-1621...'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] ss-SG-1615...'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] ss-US-1620...'
   - '[A自家爬虫] 🇹🇼[www.v2nodes.com] trojan-TW-...'
   - '[A自家爬虫] 🇹🇼[www.v2nodes.com] trojan-TW-... #1'
+  - '[A自家爬虫] 🇺🇸[www.v2nodes.com] trojan-US-... #6'
   - '[A自家爬虫] 🇹🇼 台湾2|@ripaojiedian'
-  - '[A自家爬虫] 🇭🇰 香港3|@ripaojiedian'
-  - '[A自家爬虫] 🇰🇷KR_1|5.0MB/s'
+  - '[A自家爬虫] 🇰🇷KR_1|4.7MB/s'
   - '[A自家爬虫] US_speednode_0027'
-  - '[A自家爬虫] 🇺🇸US_4|1.7MB/s'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #6'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (46)'
-  - '[A自家爬虫] 🇺🇸US_103|623KB/s|A004-260618 [0ccf6aebe480]'
-  - '[A自家爬虫] 🇺🇸US_71|1.5MB/s|A004-260618 [60a9d50d005d]'
-  - '[A自家爬虫] 🇺🇸US_92|1.4MB/s|B007-260618 [678238b25040]'
+  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (17)'
+  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (11)'
   - '[A自家爬虫] 🇰🇷KR_21|654KB/s|M002-260618 [62beea3b6fba]'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG-2... #4'
-  - '[A自家爬虫] 🇺🇸 美国 | USA 4'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (11)'
-  - '[A自家爬虫] 🇯🇵[www.v2nodes.com] vless-JP-1...'
-  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #1'
-  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] vless-KR-1...'
-  - '[A自家爬虫] 🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] ss-KR-1624...'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #7'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #10'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #3'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #4'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #5'
   - '[A自家爬虫] 🇯🇵 日本 | JPN #1'
-  - '[A自家爬虫] 🇸🇬 新加坡 | SGP #1'
-  - '[A自家爬虫] 🇸🇬 新加坡 | SGP #4'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #1'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #2'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #3'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #5'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #8'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #9'
+  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - '[A自家爬虫] 🇺🇸[www.v2nodes.com] vless-US-1... #1'
+  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (9)'
+  - '[A自家爬虫] 🇹🇼 台湾3|@ripaojiedian'
+  - '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN'
+  - '[A自家爬虫] 🇺🇸US_16|2.0MB/s'
+  - '[A自家爬虫] 🇺🇸US_17|2.8MB/s'
+  - '[A自家爬虫] 🇺🇸US_18|1.9MB/s'
+  - '[A自家爬虫] 🇭🇰 香港 | HKG 2'
+  - '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN #1'
   - '[A自家爬虫] 🇺🇸US美國丨yoyapai.com'
   - '[A自家爬虫] 🇺🇸US美国丨yoyapai.com'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (9)'
-  - '[A自家爬虫] 🇺🇸US_160|577KB/s|R002-260618 [c63ef908cfee]'
+  - '[A自家爬虫] 🇺🇸US_238|729KB/s|P002-260618 [d1e830ac3b71]'
   - '[A自家爬虫] 🇺🇸US_15|843KB/s|A004-260618 [1b7912caedd7]'
-  - '[A自家爬虫] 🇺🇸US_69|1.1MB/s|S004-260618 [3035c07b1d36]'
   - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (8)'
+  - '[A自家爬虫] 🇺🇸US_69|1.1MB/s|S004-260618 [3035c07b1d36]'
+  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (13)'
   - '[A自家爬虫] 🇸🇬SG_6|1007KB/s|A004-260618 [0298ea3f8227]'
   - '[A自家爬虫] 🇺🇸US_120|1.3MB/s|C002-260622 [0a30e7482ca2]'
   - '[A自家爬虫] 🇺🇸US_159|950KB/s|A004-260618 [18341515ef8e]'
   - '[A自家爬虫] 🇺🇸US_30|1.6MB/s|M002-260618 [3c75b7ee0a28]'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (17)'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (24)'
   - '[A自家爬虫] 🇺🇸US_200|1.1MB/s|A001-260618 [1fae46468fbb]'
   - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (16)'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (23)'
   - '[A自家爬虫] 🇸🇬SG_12|836KB/s|A004-260618 [0078dd792eff]'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #2 #2'
-  - '[A自家爬虫] 🇰🇷 韩国 | KOR #1'
-  - '[A自家爬虫] 🇸🇬SG-🚀@VPNine1'
+  - '[A自家爬虫] 🇺🇸 美国 | USA 33'
+  - '[A自家爬虫] 🇺🇸US_20|1.9MB/s'
   - '[A自家爬虫] 🇺🇸US_401|488KB/s|F003-260618 [43563ab6d2f5]'
   - '[A自家爬虫] 🇺🇸US_344|278KB/s|M002-260618 [61d455c00f0f]'
-  - '[A自家爬虫] 🇰🇷_韩国 (2)'
+  - '[A自家爬虫] 🇭🇰 香港 | HKG #2'
+  - '[A自家爬虫] 🇺🇸 美国 | USA 4'
   - '[A自家爬虫] 🇺🇸 24@exclavevpn'
   - '[A自家爬虫] 🇺🇸139909 | ⚡️Telegram = t.me/S...'
+  - '[A自家爬虫] 🇰🇷KR-🚀@VPNine1'
   - '[A自家爬虫] 🇸🇬214601 | ⚡️Telegram = t.me/v...'
+  - '[A自家爬虫] 🇸🇬SG-🚀@VPNine1'
   - '[A自家爬虫] @v2ray_phoenix'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG #1'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG #2'
   - '[A自家爬虫] 🇭🇰[www.v2nodes.com] vless-HK-1...'
+  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] vless-KR-1...'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG-1...'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG-1... #1'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG-1... #2'
@@ -1117,101 +1177,101 @@ proxy-groups:
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG-2...'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] vless-US-1...'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] vless-US-1... #2'
-  - '[A自家爬虫] 🇺🇸[www.v2nodes.com] trojan-US-... #6'
-  - '[A自家爬虫] 🇹🇼TW_1|1.6MB/s'
-  - '[A自家爬虫] 🇹🇼TW_2|2.8MB/s'
-  - '[A自家爬虫] 🇺🇸US_7|3.5MB/s'
-  - '[A自家爬虫] 🇺🇸US_8|3.3MB/s'
-  - '[A自家爬虫] 🇺🇸US_9|2.2MB/s'
-  - '[A自家爬虫] 🇺🇸US_10|3.7MB/s'
-  - '[A自家爬虫] 🇯🇵JP_1|3.9MB/s'
-  - '[A自家爬虫] 🇺🇸US_14|1.2MB/s'
-  - '[A自家爬虫] 🇯🇵JP_2|1.3MB/s'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #2'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #4'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #11'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #12'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #13'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #15'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #19'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #32'
+  - '[A自家爬虫] 🇺🇸US_12|1.1MB/s'
+  - '[A自家爬虫] 🇺🇸US_15|2.8MB/s'
+  - '[A自家爬虫] 🇭🇰HK_2|3.7MB/s'
+  - '[A自家爬虫] 🇺🇸US_19|2.6MB/s'
+  - '[A自家爬虫] 🇺🇸US_22|2.1MB/s'
+  - '[A自家爬虫] 🇭🇰 香港 | HKG'
+  - '[A自家爬虫] 🇯🇵 日本 | JPN'
+  - '[A自家爬虫] 🇸🇬 新加坡 | SGP #2'
+  - '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN 2'
+  - '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN 4'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #1'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #3'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #5'
 - name: 节点选择
   type: select
   proxies:
   - 自动选择
+  - '[A自家爬虫] 🇺🇸US_25|3.2MB/s'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] trojan-US-... #4'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] trojan-US-... #8'
+  - '[A自家爬虫] 🇭🇰[www.v2nodes.com] ss-HK-1624...'
   - '[A自家爬虫] 🇯🇵[www.v2nodes.com] ss-JP-5141...'
   - '[A自家爬虫] 🇯🇵[www.v2nodes.com] ss-JP-1291...'
   - '[A自家爬虫] 🇯🇵[www.v2nodes.com] ss-JP-9223...'
+  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] ss-KR-1624...'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] ss-SG-1616...'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] ss-SG-1615... #2'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] ss-SG-1615... #3'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] ss-US-1560...'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #2'
+  - '[A自家爬虫] 🇺🇸US_13|2.7MB/s'
+  - '[A自家爬虫] 🇭🇰 香港 | HKG #1'
+  - '[A自家爬虫] 🇭🇰HK_1|1.0MB/s'
   - '[A自家爬虫] 🇭🇰[www.v2nodes.com] ss-HK-1621...'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] ss-SG-1615...'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] ss-US-1620...'
   - '[A自家爬虫] 🇹🇼[www.v2nodes.com] trojan-TW-...'
   - '[A自家爬虫] 🇹🇼[www.v2nodes.com] trojan-TW-... #1'
+  - '[A自家爬虫] 🇺🇸[www.v2nodes.com] trojan-US-... #6'
   - '[A自家爬虫] 🇹🇼 台湾2|@ripaojiedian'
-  - '[A自家爬虫] 🇭🇰 香港3|@ripaojiedian'
-  - '[A自家爬虫] 🇰🇷KR_1|5.0MB/s'
+  - '[A自家爬虫] 🇰🇷KR_1|4.7MB/s'
   - '[A自家爬虫] US_speednode_0027'
-  - '[A自家爬虫] 🇺🇸US_4|1.7MB/s'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #6'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (46)'
-  - '[A自家爬虫] 🇺🇸US_103|623KB/s|A004-260618 [0ccf6aebe480]'
-  - '[A自家爬虫] 🇺🇸US_71|1.5MB/s|A004-260618 [60a9d50d005d]'
-  - '[A自家爬虫] 🇺🇸US_92|1.4MB/s|B007-260618 [678238b25040]'
+  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (17)'
+  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (11)'
   - '[A自家爬虫] 🇰🇷KR_21|654KB/s|M002-260618 [62beea3b6fba]'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG-2... #4'
-  - '[A自家爬虫] 🇺🇸 美国 | USA 4'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (11)'
-  - '[A自家爬虫] 🇯🇵[www.v2nodes.com] vless-JP-1...'
-  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #1'
-  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] vless-KR-1...'
-  - '[A自家爬虫] 🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] ss-KR-1624...'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #7'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #10'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #3'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #4'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #5'
   - '[A自家爬虫] 🇯🇵 日本 | JPN #1'
-  - '[A自家爬虫] 🇸🇬 新加坡 | SGP #1'
-  - '[A自家爬虫] 🇸🇬 新加坡 | SGP #4'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #1'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #2'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #3'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #5'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #8'
-  - '[A自家爬虫] 🇺🇸 美国 | USA #9'
+  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - '[A自家爬虫] 🇺🇸[www.v2nodes.com] vless-US-1... #1'
+  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (9)'
+  - '[A自家爬虫] 🇹🇼 台湾3|@ripaojiedian'
+  - '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN'
+  - '[A自家爬虫] 🇺🇸US_16|2.0MB/s'
+  - '[A自家爬虫] 🇺🇸US_17|2.8MB/s'
+  - '[A自家爬虫] 🇺🇸US_18|1.9MB/s'
+  - '[A自家爬虫] 🇭🇰 香港 | HKG 2'
+  - '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN #1'
   - '[A自家爬虫] 🇺🇸US美國丨yoyapai.com'
   - '[A自家爬虫] 🇺🇸US美国丨yoyapai.com'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (9)'
-  - '[A自家爬虫] 🇺🇸US_160|577KB/s|R002-260618 [c63ef908cfee]'
+  - '[A自家爬虫] 🇺🇸US_238|729KB/s|P002-260618 [d1e830ac3b71]'
   - '[A自家爬虫] 🇺🇸US_15|843KB/s|A004-260618 [1b7912caedd7]'
-  - '[A自家爬虫] 🇺🇸US_69|1.1MB/s|S004-260618 [3035c07b1d36]'
   - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (8)'
+  - '[A自家爬虫] 🇺🇸US_69|1.1MB/s|S004-260618 [3035c07b1d36]'
+  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (13)'
   - '[A自家爬虫] 🇸🇬SG_6|1007KB/s|A004-260618 [0298ea3f8227]'
   - '[A自家爬虫] 🇺🇸US_120|1.3MB/s|C002-260622 [0a30e7482ca2]'
   - '[A自家爬虫] 🇺🇸US_159|950KB/s|A004-260618 [18341515ef8e]'
   - '[A自家爬虫] 🇺🇸US_30|1.6MB/s|M002-260618 [3c75b7ee0a28]'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (17)'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (24)'
   - '[A自家爬虫] 🇺🇸US_200|1.1MB/s|A001-260618 [1fae46468fbb]'
   - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (16)'
-  - '[A自家爬虫] US美国(mibei77.com 米贝节点分享) (23)'
   - '[A自家爬虫] 🇸🇬SG_12|836KB/s|A004-260618 [0078dd792eff]'
-  - '[A自家爬虫] 🇭🇰 香港 | HKG #2 #2'
-  - '[A自家爬虫] 🇰🇷 韩国 | KOR #1'
-  - '[A自家爬虫] 🇸🇬SG-🚀@VPNine1'
+  - '[A自家爬虫] 🇺🇸 美国 | USA 33'
+  - '[A自家爬虫] 🇺🇸US_20|1.9MB/s'
   - '[A自家爬虫] 🇺🇸US_401|488KB/s|F003-260618 [43563ab6d2f5]'
   - '[A自家爬虫] 🇺🇸US_344|278KB/s|M002-260618 [61d455c00f0f]'
-  - '[A自家爬虫] 🇰🇷_韩国 (2)'
+  - '[A自家爬虫] 🇭🇰 香港 | HKG #2'
+  - '[A自家爬虫] 🇺🇸 美国 | USA 4'
   - '[A自家爬虫] 🇺🇸 24@exclavevpn'
   - '[A自家爬虫] 🇺🇸139909 | ⚡️Telegram = t.me/S...'
+  - '[A自家爬虫] 🇰🇷KR-🚀@VPNine1'
   - '[A自家爬虫] 🇸🇬214601 | ⚡️Telegram = t.me/v...'
+  - '[A自家爬虫] 🇸🇬SG-🚀@VPNine1'
   - '[A自家爬虫] @v2ray_phoenix'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG #1'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG #2'
   - '[A自家爬虫] 🇭🇰[www.v2nodes.com] vless-HK-1...'
+  - '[A自家爬虫] 🇰🇷[www.v2nodes.com] vless-KR-1...'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG-1...'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG-1... #1'
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG-1... #2'
@@ -1221,15 +1281,26 @@ proxy-groups:
   - '[A自家爬虫] 🇸🇬[www.v2nodes.com] vless-SG-2...'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] vless-US-1...'
   - '[A自家爬虫] 🇺🇸[www.v2nodes.com] vless-US-1... #2'
-  - '[A自家爬虫] 🇺🇸[www.v2nodes.com] trojan-US-... #6'
-  - '[A自家爬虫] 🇹🇼TW_1|1.6MB/s'
-  - '[A自家爬虫] 🇹🇼TW_2|2.8MB/s'
-  - '[A自家爬虫] 🇺🇸US_7|3.5MB/s'
-  - '[A自家爬虫] 🇺🇸US_8|3.3MB/s'
-  - '[A自家爬虫] 🇺🇸US_9|2.2MB/s'
-  - '[A自家爬虫] 🇺🇸US_10|3.7MB/s'
-  - '[A自家爬虫] 🇯🇵JP_1|3.9MB/s'
-  - '[A自家爬虫] 🇺🇸US_14|1.2MB/s'
-  - '[A自家爬虫] 🇯🇵JP_2|1.3MB/s'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #2'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #4'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #11'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #12'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #13'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #15'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #19'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #32'
+  - '[A自家爬虫] 🇺🇸US_12|1.1MB/s'
+  - '[A自家爬虫] 🇺🇸US_15|2.8MB/s'
+  - '[A自家爬虫] 🇭🇰HK_2|3.7MB/s'
+  - '[A自家爬虫] 🇺🇸US_19|2.6MB/s'
+  - '[A自家爬虫] 🇺🇸US_22|2.1MB/s'
+  - '[A自家爬虫] 🇭🇰 香港 | HKG'
+  - '[A自家爬虫] 🇯🇵 日本 | JPN'
+  - '[A自家爬虫] 🇸🇬 新加坡 | SGP #2'
+  - '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN 2'
+  - '[A自家爬虫] 🇹🇼 🇨🇳 台湾 | TWN 4'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #1'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #3'
+  - '[A自家爬虫] 🇺🇸 美国 | USA #5'
 rules:
 - MATCH,节点选择
