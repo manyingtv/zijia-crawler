@@ -1,9 +1,9 @@
 自家爬虫 本次更新统计
-更新时间(UTC): 2026-11-27 23:30:42
-抓取总数: 9349
-去重后: 6679
-多源收录分布(源数:节点数): {"2": 1324, "3": 124, "4": 56, "5": 46, "7": 8, "8": 2, "6": 1, "1": 5118}
-地区过滤后(仅美新日港韩台): 617
+更新时间(UTC): 2026-11-28 07:58:10
+抓取总数: 9392
+去重后: 6719
+多源收录分布(源数:节点数): {"2": 1366, "1": 5145, "4": 56, "3": 97, "5": 38, "6": 7, "7": 8, "8": 2}
+地区过滤后(仅美新日港韩台): 632
 最终打包: 100
-按协议: {"trojan": 20, "ss": 19, "anytls": 5, "vless": 34, "http": 4, "vmess": 14, "socks5": 3, "ssr": 1}
-各源条数: NoMoreWalls=257, Barabama=1683, ermaozi=409, free18=222, marshall=16, ripaojiedian=18, mfuu=0, V2RayAggregator=4537, AutoMerge=122, anaer=2085
+按协议: {"ss": 22, "vless": 31, "anytls": 4, "vmess": 32, "http": 2, "hysteria2": 1, "trojan": 7, "socks5": 1}
+各源条数: NoMoreWalls=348, Barabama=1683, ermaozi=347, free18=337, marshall=16, ripaojiedian=19, mfuu=0, V2RayAggregator=4458, AutoMerge=99, anaer=2085
